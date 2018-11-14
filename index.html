@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="client/jquery-3.3.1.min.js"></script>
+    <script src="client/paroller.js/dist/jquery.paroller.min.js"></script>
+</head>
+<style type="text/css">
+    body {
+        background: black;
+    }
+
+    .screenSize {
+        height: 100vh;
+    }
+
+    #main {
+        background-image: url("assets/background-2462431_1920.jpg");
+    }
+
+    #who-we-are {
+        background-image: url("assets/cyber-3400789_1920.jpg");
+    }
+
+    #what-do-we-do {
+        background-image: url("assets/question-mark-2492009_1920.jpg");
+    }
+
+    #products {
+        background: url("assets/brain-20424.jpg") center no-repeat #000000;
+        background-size: cover;
+    }
+
+    .nav {
+        background: red;
+        position: fixed;
+        width: 100%;
+        height: $ nav-height;
+        font-size: 20px;
+        line-height: $ nav-height;
+        background: #ff5252;
+        color: #fff;
+        margin-bottom: -$ nav-height;
+        text-transform: uppercase;
+    }
+    #section-name{
+        position: fixed;
+        height: 20px;
+        background: black;
+        color: white;
+    }
+</style>
+<body>
+<div id="section-name">Titulo</div>
+<div class="nav">
+    <div class="main-link">
+        Principal
+    </div>
+    <div class="who-we-are-link">
+        Quienes somos
+    </div>
+</div>
+<div id="main" class="screenSize">
+    Main
+</div>
+<div id="who-we-are" class="screenSize">Quienes somos</div>
+<div id="what-do-we-do" class="screenSize">Que hacemos</div>
+<div id="products" class="screenSize">Productos</div>
+</body>
+<script type="text/javascript">
+    $('document').ready(function (event) {
+        $('body').paroller();
+        $('#main, #who-we-are, #what-do-we-do, #products').paroller({
+            factor: 1,
+            factorXs: 0.2,
+            factorSm: 0.3,
+            type: 'background',
+            direction: 'vertical'
+        });
+        $('.main-link').click(function () {
+            $('#section-name').html('Principal');
+            $('html, body').animate({
+                scrollTop: $("#main").offset().top
+            }, 2000);
+        });
+        $('.who-we-are-link').click(function () {
+            $('#section-name').html('Quienes somos');
+            $('html, body').animate({
+                scrollTop: $("#who-we-are").offset().top
+            }, 2000);
+        });
+    })
+</script>
+</html>
