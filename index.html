@@ -3,32 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="client/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
     <script src="client/paroller.js/dist/jquery.paroller.min.js"></script>
 </head>
 <style type="text/css">
-    body {
-        background: black;
-    }
-
-    .screenSize {
-        height: 100vh;
-    }
-
     #main {
         background-image: url("assets/background-2462431_1920.jpg");
+        height: 100vh;
+        padding: 3em;
     }
 
     #who-we-are {
         background-image: url("assets/cyber-3400789_1920.jpg");
+        height: 100vh;
     }
 
     #what-do-we-do {
         background-image: url("assets/question-mark-2492009_1920.jpg");
+        height: 100vh;
     }
 
     #products {
         background: url("assets/brain-20424.jpg") center no-repeat #000000;
+        height: 100vh;
         background-size: cover;
     }
 
@@ -44,33 +60,80 @@
         margin-bottom: -$ nav-height;
         text-transform: uppercase;
     }
-    #section-name{
+
+    #section-name {
         position: fixed;
         height: 20px;
         background: black;
         color: white;
     }
 </style>
-<body>
-<div id="section-name">Titulo</div>
-<div class="nav">
-    <div class="main-link">
-        Principal
+<body id="container">
+<!--<div class="nav">-->
+    <!--<ul>-->
+        <!--<li>-->
+            <!--<a href="#main">Principal</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+    <!--<div class="main-link">-->
+        <!--Principal-->
+    <!--</div>-->
+    <!--<div class="who-we-are-link">-->
+        <!--Quienes somos-->
+    <!--</div>-->
+<!--</div>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
     </div>
-    <div class="who-we-are-link">
-        Quienes somos
+</nav>
+<div id="main">
+    <div class="card border-success">
+        <div class="card-header bg-transparent border-success">Header</div>
+        <div class="card-body text-success">
+            <h5 class="card-title">Success card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">Footer</div>
     </div>
 </div>
-<div id="main" class="screenSize">
-    Main
-</div>
-<div id="who-we-are" class="screenSize">Quienes somos</div>
-<div id="what-do-we-do" class="screenSize">Que hacemos</div>
-<div id="products" class="screenSize">Productos</div>
+<div id="who-we-are">Quienes somos</div>
+<div id="what-do-we-do">Que hacemos</div>
+<div id="products">Productos</div>
 </body>
 <script type="text/javascript">
     $('document').ready(function (event) {
-        $('body').paroller();
+        $('#container').paroller();
         $('#main, #who-we-are, #what-do-we-do, #products').paroller({
             factor: 1,
             factorXs: 0.2,
