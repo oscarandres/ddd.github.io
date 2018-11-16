@@ -1,158 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-    <script src="client/paroller.js/dist/jquery.paroller.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DIGITAL DATA DETECTIVES</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
 </head>
-<style type="text/css">
-    #main {
-        background-image: url("assets/background-2462431_1920.jpg");
-        height: 100vh;
-        padding: 3em;
-    }
 
-    #who-we-are {
-        background-image: url("assets/cyber-3400789_1920.jpg");
-        height: 100vh;
-    }
+<body id="page-top">
 
-    #what-do-we-do {
-        background-image: url("assets/question-mark-2492009_1920.jpg");
-        height: 100vh;
-    }
-
-    #products {
-        background: url("assets/brain-20424.jpg") center no-repeat #000000;
-        height: 100vh;
-        background-size: cover;
-    }
-
-    .nav {
-        background: red;
-        position: fixed;
-        width: 100%;
-        height: $ nav-height;
-        font-size: 20px;
-        line-height: $ nav-height;
-        background: #ff5252;
-        color: #fff;
-        margin-bottom: -$ nav-height;
-        text-transform: uppercase;
-    }
-
-    #section-name {
-        position: fixed;
-        height: 20px;
-        background: black;
-        color: white;
-    }
-</style>
-<body id="container">
-<!--<div class="nav">-->
-    <!--<ul>-->
-        <!--<li>-->
-            <!--<a href="#main">Principal</a>-->
-        <!--</li>-->
-    <!--</ul>-->
-    <!--<div class="main-link">-->
-        <!--Principal-->
-    <!--</div>-->
-    <!--<div class="who-we-are-link">-->
-        <!--Quienes somos-->
-    <!--</div>-->
-<!--</div>-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Digital Data Detectives</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">Nuestra esencia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#projects">Lo que amamos hacer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#signup">Trabajemos Juntos</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
-<div id="main">
-    <div class="card border-success">
-        <div class="card-header bg-transparent border-success">Header</div>
-        <div class="card-body text-success">
-            <h5 class="card-title">Success card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+<!-- Header -->
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+            <h1 class="mx-auto my-0 text-uppercase">DIGITAL DATA DETECTIVES</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">Discovering the way for your goals <span
+                    class="fas fa-flag-checkered"></span></h2>
+            <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
         </div>
-        <div class="card-footer bg-transparent border-success">Footer</div>
     </div>
-</div>
-<div id="who-we-are">Quienes somos</div>
-<div id="what-do-we-do">Que hacemos</div>
-<div id="products">Productos</div>
+</header>
+<section id="about" class="page-section about-heading bg-black" style="height: 100vh">
+    <div class="container">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/rocks.jpg" alt="">
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Pasíon y Excelencia</span>
+                            <span class="section-heading-lower">Nuestra esencia</span>
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac malesuada elit. Nulla
+                            facilisi.
+                            Aliquam aliquet, elit in condimentum venenatis, ligula tortor imperdiet nunc, a suscipit ex justo
+                            vel
+                            nisl. Pellentesque at magna at magna accumsan laoreet. Praesent semper posuere magna. Donec sed
+                            neque
+                            sem. Integer porttitor rhoncus leo, a fringilla velit ornare at. Donec dignissim erat in erat
+                            euismod
+                            dapibus.
+                        </p>
+                        <p>
+                            Aliquam rutrum risus magna, quis posuere velit auctor vel. In scelerisque viverra malesuada. Integer
+                            porta pellentesque mattis. Aliquam erat volutpat. Fusce condimentum accumsan vulputate. In semper
+                            libero
+                            a imperdiet ultrices. Nullam non accumsan turpis, id vehicula lorem. Maecenas dignissim ornare ante,
+                            ac
+                            lacinia nibh pulvinar ac. Pellentesque fermentum purus sit amet dui lobortis, sit amet viverra ex
+                            ornare. Vestibulum at tempus magna, nec vestibulum lectus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light">
+    <div class="container">
+        <!-- Project One Row -->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="img/smiley-2979107_1920.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">Analisis de sentimientos</h4>
+                            <p class="mb-0 text-white-50">An example of where you can put an image of a project, or
+                                anything else, along with a description.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Two Row -->
+        <div class="row justify-content-center no-gutters">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="img/people-43575_1280.png" alt="">
+            </div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-white">Segmentación de mercado</h4>
+                            <p class="mb-0 text-white-50">Another example of a project with its respective description.
+                                These sections work well responsively as well, try this theme on a small screen!</p>
+                            <hr class="d-none d-lg-block mb-0 mr-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="img/brain-20424.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">Dise&ntilde;o de estrategias</h4>
+                            <p class="mb-0 text-white-50">An example of where you can put an image of a project, or
+                                anything else, along with a description.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center no-gutters">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="img/background-2492010_1920.jpg" alt="">
+            </div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-white">Detección de anomalias</h4>
+                            <p class="mb-0 text-white-50">Another example of a project with its respective description.
+                                These sections work well responsively as well, try this theme on a small screen!</p>
+                            <hr class="d-none d-lg-block mb-0 mr-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="img/night-photograph-2183637_1920.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">No hay limites para los sue&ntilde;os</h4>
+                            <p class="mb-0 text-white-50">An example of where you can put an image of a project, or
+                                anything else, along with a description.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Signup Section -->
+<section id="signup" class="signup-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto text-center">
+                <i class="far fa-handshake fa-2x mb-2 text-white"></i>
+                <h2 class="text-white mb-5">Trabajemos Juntos</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section bg-black">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Address</h4>
+                        <hr class="my-4">
+                        <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-envelope text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Email</h4>
+                        <hr class="my-4">
+                        <div class="small text-black-50">
+                            <a href="#">hello@yourdomain.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Phone</h4>
+                        <hr class="my-4">
+                        <div class="small text-black-50">+1 (555) 902-8832</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="social d-flex justify-content-center">
+            <a href="#" class="mx-2">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="mx-2">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black small text-center text-white-50">
+    <div class="container">
+        Copyright &copy; Your Website 2018
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/grayscale.min.js"></script>
+
 </body>
-<script type="text/javascript">
-    $('document').ready(function (event) {
-        $('#container').paroller();
-        $('#main, #who-we-are, #what-do-we-do, #products').paroller({
-            factor: 1,
-            factorXs: 0.2,
-            factorSm: 0.3,
-            type: 'background',
-            direction: 'vertical'
-        });
-        $('.main-link').click(function () {
-            $('#section-name').html('Principal');
-            $('html, body').animate({
-                scrollTop: $("#main").offset().top
-            }, 2000);
-        });
-        $('.who-we-are-link').click(function () {
-            $('#section-name').html('Quienes somos');
-            $('html, body').animate({
-                scrollTop: $("#who-we-are").offset().top
-            }, 2000);
-        });
-    })
-</script>
+
 </html>
