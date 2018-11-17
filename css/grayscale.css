@@ -36,7 +36,11 @@
   outline: none;
   background-color: transparent;
 }
-
+@media screen and(min-width:769px) {
+  .squares {
+    overflow-x:hidden;
+  }
+}
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
